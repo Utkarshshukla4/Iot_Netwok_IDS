@@ -54,7 +54,7 @@ git clone https://github.com/<your-username>/IoT_Network_IDS.git
 
 cd IoT_Network_IDS
 
-pip install -r requirements.txt
+
 
  ## Create virtual environment
 
@@ -64,6 +64,7 @@ python -m venv env
 
 env\Scripts\activate
 
+pip install -r requirements.txt 
 
 _Linux_
 
@@ -71,6 +72,7 @@ python3 -m venv env
 
 source env/bin/activate
 
+python3 -m pip install -r requirements.txt 
 
 ## Run
 

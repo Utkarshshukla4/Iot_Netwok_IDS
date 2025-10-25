@@ -1,58 +1,97 @@
-# Real-World IoT Network IDS
+## Contact
 
-This project is a simple **Intrusion Detection System (IDS)** for local IoT or Wi-Fi networks.  
-It scans connected devices, detects **new or suspicious ones**, and logs all activity.
+**Utkarsh Shukla**
 
-## 🔍 What it does
-- Scans your local network (Wi-Fi or LAN)
-- Lists connected devices with IP and MAC address
-- Detects:
-  - New unknown devices joining
-  - IP → MAC address changes (possible ARP spoofing)
-- Logs all events to `ids_events.log`
-- Saves connected devices in `network_devices.csv`
-- Works on **Windows and Linux**
-- Optional active blocking (Linux only using iptables)
+Email- utqrshkumar07@gmail.com
 
-## 🧠 How it helps
-Acts like a **basic IoT network IDS** — it keeps watch for new or suspicious devices  
-and helps you understand if someone’s trying to spoof or intrude on your network.
+GitHub- https://github.com/Utkarshshukla4
 
----
 
-## ⚙️ Setup Steps
+##  Overview
+This project monitors IoT network traffic to detect intrusions or suspicious behavior using Python-based anomaly detection models.  
+It can run on Raspberry Pi, Windows, or Linux.
 
-### 1. Clone or download
-```bash
+
+
+##  Features
+- Behavior-based intrusion detection  
+- Works on multiple platforms  
+- Logs suspicious device activities  
+- CLI interface  
+
+
+
+##  Architecture
+
+[IoT Network Traffic]
+      ↓
+[Packet Capture (scapy / tshark)]
+      ↓
+[Feature Extraction]
+      ↓
+[Anomaly Detection Model]
+      ↓
+[Alert / Log Generation]
+
+
+
+## Project Structure
+
+iot-network-ids/
+├── src/
+├── dataset/
+├── docs/
+│   └── architecture.png
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+
+## Installation
+
+
 git clone https://github.com/<your-username>/IoT_Network_IDS.git
-cd IoT_Network_IDS
-2. Create virtual environment
 
-Windows
+cd IoT_Network_IDS
+
+pip install -r requirements.txt
+
+ ## Create virtual environment
+
+_Windows_
 
 python -m venv env
 env\Scripts\activate
 
 
-Linux
+_Linux_
 
 python3 -m venv env
 source env/bin/activate
 
-3. Install dependencies
-pip install -r requirements.txt
 
-4. Run the IDS monitor
+## Run
 
-Windows
+_Windows_
 
 python ids_monitor_crossplatform.py
 
 
-Linux
+_Linux_
 
 sudo python3 ids_monitor_crossplatform.py
 
 
-On Linux, running with sudo is needed for scanning and optional blocking.
-On Windows, blocking is automatically disabled (scan & detect only).
+## Input Example
+
+The tool automatically captures packets from connected devices.
+
+## Output Example
+
+Device: ESP8266  
+Activity: Normal  
+Anomaly Score: 0.02
+
+ ## Summary
+
+This IDS monitors IoT traffic and alerts about suspicious behaviors to protect network integrity.

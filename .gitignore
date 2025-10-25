@@ -1,0 +1,34 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment folders
+env/
+venv/
+ENV/
+.venv/
+.env/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE / VS Code settings
+.vscode/
+.idea/
+
+# Log and data files
+*.log
+*.csv
+
+# Temporary or backup files
+*.bak
+*.tmp
+
+# OS-specific
+desktop.ini
+
+# Jupyter or temp notebooks (if any)
+*.ipynb_checkpoints/

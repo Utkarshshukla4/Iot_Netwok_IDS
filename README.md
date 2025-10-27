@@ -105,7 +105,7 @@ This IDS monitors IoT traffic and alerts about suspicious behaviors to protect n
 
 **Utkarsh Shukla**
 
-_Cybersecurity Enthusiasts_
+_Cybersecurity Enthusiast_
 
 Email- utqrshkumar07@gmail.com
 

@@ -1,11 +1,3 @@
-## Contact
-
-**Utkarsh Shukla**
-
-Email- utqrshkumar07@gmail.com
-
-GitHub- https://github.com/Utkarshshukla4
-
 
 ##  Overview
 This project monitors IoT network traffic to detect intrusions or suspicious behavior using Python-based anomaly detection models.  
@@ -17,9 +9,17 @@ It can run on Raspberry Pi, Windows, or Linux.
 - Behavior-based intrusion detection  
 - Works on multiple platforms  
 - Logs suspicious device activities  
-- CLI interface  
+- CLI interface
 
+## What This Does
 
+-Monitors network traffic from IoT devices in real time.
+
+-Detects unusual behavior such as abnormal traffic spikes or unauthorized communication.
+
+-Logs and alerts administrators about suspicious devices or connections.
+
+-Protects IoT ecosystems from botnets, malware, and unauthorized access.
 
 ##  Architecture
 
@@ -50,7 +50,7 @@ iot-network-ids/
 ## Installation
 
 
-git clone https://github.com/<your-username>/IoT_Network_IDS.git
+git clone https://github.com/Utkarshshukla4/IoT_Network_IDS.git
 
 cd IoT_Network_IDS
 
@@ -99,3 +99,12 @@ Anomaly Score: 0.02
  ## Summary
 
 This IDS monitors IoT traffic and alerts about suspicious behaviors to protect network integrity.
+
+
+## Contact
+
+**Utkarsh Shukla**
+
+Email- utqrshkumar07@gmail.com
+
+GitHub- https://github.com/Utkarshshukla4

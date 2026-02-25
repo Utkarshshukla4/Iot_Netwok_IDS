@@ -11,7 +11,7 @@ It can run on Raspberry Pi, Windows, or Linux.
 - Logs suspicious device activities  
 - CLI interface
 
-## What This Does
+## What This Tool Does
 
 -Monitors network traffic from IoT devices in real time.
 
@@ -58,7 +58,7 @@ iot-network-ids/
 
  ## Create virtual environment and install dependencies 
 
-_Windows_:
+_Windows:_
 
 •python -m venv env
 
@@ -66,7 +66,7 @@ _Windows_:
 
 •pip install -r requirements.txt 
 
-_Linux_:
+_Linux:_
 
 •python3 -m venv env
 
@@ -76,12 +76,12 @@ _Linux_:
 
 ## Run
 
-_Windows_
+_Windows:_
 
 •python ids_monitor_crossplatform.py
 
 
-_Linux_
+_Linux:_
 
 •sudo python3 ids_monitor_crossplatform.py
 

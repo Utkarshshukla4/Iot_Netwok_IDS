@@ -50,40 +50,40 @@ iot-network-ids/
 ## Installation
 
 
-git clone https://github.com/Utkarshshukla4/IoT_Network_IDS.git
+•git clone https://github.com/Utkarshshukla4/IoT_Network_IDS.git
 
-cd IoT_Network_IDS
+•cd IoT_Network_IDS
 
 
 
- ## Create virtual environment
+ ## Create virtual environment and install dependencies 
 
-_Windows_
+_Windows_:
 
-python -m venv env
+•python -m venv env
 
-env\Scripts\activate
+•env\Scripts\activate
 
-pip install -r requirements.txt 
+•pip install -r requirements.txt 
 
-_Linux_
+_Linux_:
 
-python3 -m venv env
+•python3 -m venv env
 
-source env/bin/activate
+•source env/bin/activate
 
-python3 -m pip install -r requirements.txt 
+•python3 -m pip install -r requirements.txt 
 
 ## Run
 
 _Windows_
 
-python ids_monitor_crossplatform.py
+•python ids_monitor_crossplatform.py
 
 
 _Linux_
 
-sudo python3 ids_monitor_crossplatform.py
+•sudo python3 ids_monitor_crossplatform.py
 
 
 ## Input Example

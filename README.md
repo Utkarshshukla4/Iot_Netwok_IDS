@@ -1,112 +1,189 @@
+# Real-World IoT Network IDS
 
-##  Overview
-This project monitors IoT network traffic to detect intrusions or suspicious behavior using Python-based anomaly detection models.  
-It can run on Raspberry Pi, Windows, or Linux.
+## About the Project
 
+Real-World IoT Network IDS is a Python-based Intrusion Detection System designed to monitor local Wi-Fi and LAN networks.
 
+The system scans connected devices, identifies new or unknown devices, detects IP-to-MAC address changes, and records network activity for further analysis.
 
-##  Features
-- Behavior-based intrusion detection  
-- Works on multiple platforms  
-- Logs suspicious device activities  
-- CLI interface
+It is designed as a simple network security tool for understanding device monitoring, suspicious activity detection, and basic intrusion detection.
 
-## What This Tool Does
+---
 
--Monitors network traffic from IoT devices in real time.
+## Main Features
 
--Detects unusual behavior such as abnormal traffic spikes or unauthorized communication.
+* Scans local Wi-Fi and LAN networks
+* Detects connected devices
+* Displays IP and MAC addresses
+* Detects new or unknown devices
+* Detects IP-to-MAC address changes
+* Helps identify possible ARP spoofing activity
+* Logs security events
+* Saves discovered devices in CSV format
+* Supports Windows and Linux
+* Optional IP blocking on Linux using `iptables`
 
--Logs and alerts administrators about suspicious devices or connections.
+---
 
--Protects IoT ecosystems from botnets, malware, and unauthorized access.
+## Technologies Used
 
-##  Architecture
+* **Python** – Core development
+* **Network Scanning** – Device discovery
+* **IP/MAC Analysis** – Device tracking
+* **CSV** – Device data storage
+* **Logging** – Event recording
+* **iptables** – Linux IP blocking
 
-[IoT Network Traffic]
-      ↓
-[Packet Capture (scapy / tshark)]
-      ↓
-[Feature Extraction]
-      ↓
-[Anomaly Detection Model]
-      ↓
-[Alert / Log Generation]
-
-
+---
 
 ## Project Structure
 
-iot-network-ids/
-├── src/
-├── dataset/
-├── docs/
-│   └── architecture.png
+```text id="4f8m0j"
+IoT_Network_IDS/
+│
+├── ids_monitor_crossplatform.py
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── ids_events.log
+└── network_devices.csv
+```
 
+---
+
+## How It Works
+
+```text id="l3k6q4"
+Local Network
+      ↓
+Network Scan
+      ↓
+Discover Devices
+      ↓
+Compare with Previous Scan
+      ↓
+Detect New / Suspicious Devices
+      ↓
+Log Security Event
+      ↓
+Optional IP Blocking
+```
+
+The IDS regularly scans the local network and compares the discovered devices with previously recorded information.
+
+When a new device appears or an existing IP address is associated with a different MAC address, the system generates a security event.
+
+---
+
+## Detection
+
+The system monitors for:
+
+```text id="c1dqcw"
+New Device
+    ↓
+Unknown IP / MAC Detected
+    ↓
+Security Event Logged
+
+IP → MAC Change
+    ↓
+Possible ARP Spoofing
+    ↓
+Security Event Logged
+```
+
+These checks provide a basic way to identify unexpected devices and possible network manipulation.
+
+---
 
 ## Installation
 
+### 1. Clone the Repository
 
-•git clone https://github.com/Utkarshshukla4/IoT_Network_IDS.git
+```bash id="k9t4je"
+git clone https://github.com/<your-username>/IoT_Network_IDS.git
+cd IoT_Network_IDS
+```
 
-•cd IoT_Network_IDS
+### 2. Create Virtual Environment
 
+Windows:
 
+```bash id="i4m0af"
+python -m venv env
+env\Scripts\activate
+```
 
- ## Create virtual environment and install dependencies 
+Linux:
 
-_Windows:_
+```bash id="5j2x9x"
+python3 -m venv env
+source env/bin/activate
+```
 
-•python -m venv env
+### 3. Install Dependencies
 
-•env\Scripts\activate
+```bash id="f7q8re"
+pip install -r requirements.txt
+```
 
-•pip install -r requirements.txt 
+---
 
-_Linux:_
+## Run the IDS
 
-•python3 -m venv env
+### Windows
 
-•source env/bin/activate
+```bash id="r6x8am"
+python ids_monitor_crossplatform.py
+```
 
-•python3 -m pip install -r requirements.txt 
+Windows supports network scanning and detection. Active IP blocking is disabled.
 
-## Run
+### Linux
 
-_Windows:_
+```bash id="q8s0xk"
+sudo python3 ids_monitor_crossplatform.py
+```
 
-•python ids_monitor_crossplatform.py
+Linux may require `sudo` for network scanning and optional IP blocking using `iptables`.
 
+---
 
-_Linux:_
+## Output Files
 
-•sudo python3 ids_monitor_crossplatform.py
+The IDS generates two main files:
 
+```text id="y4x9cz"
+ids_events.log
+→ Stores detected network and security events.
 
-## Input Example
+network_devices.csv
+→ Stores discovered device information such as IP and MAC addresses.
+```
 
-The tool automatically captures packets from connected devices.
+---
 
-## Output Example
+## Security Note
 
-Device: ESP8266  
-Activity: Normal  
-Anomaly Score: 0.02
+This project is intended for monitoring networks that you own or have permission to test.
 
- ## Summary
+The IDS provides basic network monitoring and detection capabilities and should not be considered a replacement for a production-grade IDS such as enterprise network security solutions.
 
-This IDS monitors IoT traffic and alerts about suspicious behaviors to protect network integrity.
+---
 
+## Future Improvements
 
-## Contact
+* Add a real-time monitoring dashboard
+* Improve ARP spoofing detection
+* Add device reputation checking
+* Add email or notification alerts
+* Support additional network protocols
+* Improve automated response capabilities
+
+---
+
+## Author
 
 **Utkarsh Shukla**
 
-_Cybersecurity Enthusiast_
-
-Email- utqrshkumar07@gmail.com
-
-GitHub- https://github.com/Utkarshshukla4
+Cybersecurity Project | Python | Network Security | Intrusion Detection
